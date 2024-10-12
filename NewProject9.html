@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type='text' id="text" />
+    <input type="email" />
+    <input type="password" />
+    <input type="radio" />
+    <input type="checkbox" />
+    <input type="submit" />
+    <input type="button" value="Button"/>
+
+    <script>
+        var inputs = [].slice.call(document.getElementsByTagName('input'));
+        console.log(inputs);
+        var changeText = function(){
+            console.log(this.value)
+        }
+        // var text = document.getElementById('text');
+        // inputText = document.getElementById('inputText');
+        // console.log(text);
+        // var changeText = function() {
+            // console.log(this.value);
+            // var p = document.createElement('p');
+            // p.textContent = this.value;
+            // text.after(p)
+            // inputText.textContent = this.value;
+        // }
+        inputs.forEach(function(input) {
+            input.addEventListener('change', changeText, false);
+        })
+        // changeText.call(text);
+        text.addEventListener('change', changeText, false);
+    </script>
+</body>
+</html>

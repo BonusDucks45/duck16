@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 hell</title>
+</head>
+<body>
+    <input type="text", id="text" />
+    <script>
+        var text = document.getElementById('text')
+
+        var changeText = function() {
+            console.log(this.value);
+        }
+        var focusin = function() {
+            console.log('Нажата кнопка')
+        }
+        var focusout = function() {
+            console.log('Не нажата кнопка')
+        }
+        text.addEventListener('focus', focusin, false);
+        text.addEventListener('focus', focusout, false);
+    </script>
+</body>
+</html>
